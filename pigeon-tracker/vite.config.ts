@@ -27,7 +27,8 @@ export default defineConfig({
       name: "pigeon-tracker",
       filename: "pigeonTracker.js",
       exposes: {
-        "./App": "./src/App.vue",
+        "./App": "./src/components/Shipment/ShipmentView.vue",
+        "./Json": "./src/components/ShipmentJson/ShipmentJson.vue",
       },
       shared: ["vue"],
     }),

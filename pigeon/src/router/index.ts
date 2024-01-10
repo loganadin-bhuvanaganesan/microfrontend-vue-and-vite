@@ -19,9 +19,20 @@ const router = createRouter({
           name: "trackerWithId",
           component: () => import("pigeon_tracker/App"),
         },
-      ],
+      ]
     },
-
+    {
+      path: "/tracker/table",
+      name: "trackerjson",
+      component: () => import("pigeon_tracker/Json"),
+      children: [
+        {
+          path: "/:id",
+          name: "trackerWithId",
+          component: () => import("pigeon_tracker/Json"),
+        },
+      ]
+    },
     {
       path: "/shipments",
       name: "shipments",
